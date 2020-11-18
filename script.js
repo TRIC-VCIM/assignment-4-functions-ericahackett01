@@ -1,12 +1,8 @@
-//Prompt the user for their name.
+
 let name = prompt('What is your name?');
 
-//Use the .length property to determine the number of characters in their name.
 const nameLength = name.length;
 console.log("name length = " + nameLength);
-
-//Set the background color of the *div* based on their name length with a minimum of 2 and maximum of 12. You can use any 10 colors you want.
-//*hint: `Document.querySelector("div").className = classNameforBackgroundColor`*
 
 function backgroundColor(length) {
   let color = "unknown";
@@ -40,23 +36,9 @@ function backgroundColor(length) {
 let colorSelected = backgroundColor(nameLength);
 document.querySelector("div").className = colorSelected;
 
-//Prompt the user for the day they were born.
-
-
-/*Set the font-family for *p* based on their choice:
-*	1-5 â€“ font 1
-*	6-10 â€“ font 2
-*	11 â€“ 15 â€“ font 3
-*	16 â€“ 20	- font 4
-*	21 â€“ 25 â€“ font 5
-*	26 â€“ 31 â€“ font 6
-*/
 let birthday = prompt('What day of the month were you born?');
 console.log("birthday = " + birthday);
 
-// function fontType (birthday) {
-
-// birthday = parseInt(birthday);
 
 let font = "unknown";
   if (birthday >= 1 && birthday <= 5 ) {
@@ -78,8 +60,6 @@ let font = "unknown";
 let fontClass = fontType(birthday); 
 document.querySelector("p").className = fontClass;
 
-//Set an image based on a random number generated using the length of their name as the stopping point. The images are included in your assignment and have the following format, image-2.jpg where â€œ2â€ is replaced by the generated random number. If the number generated is 12 or greater it will get image-12.jpg 
-//*hint: `Document.querySelector("figure").innerHtml = "<img src='image-*random number*.jpg' alt="random image">`*
 
 let randomNumber = Math.floor( Math.random() * nameLength ) + 2;
 
